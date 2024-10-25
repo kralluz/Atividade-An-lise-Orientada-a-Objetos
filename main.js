@@ -1,38 +1,13 @@
-class User {
-  constructor(id, name, email, role = "user") {
-    this.id = id;
-    this.name = name;
-    this.email = email;
-    this.role = role;
-    this._password = null;
-  }
+// Importando classes (se estiver usando módulos)
+import { Cliente, Fornecedor, Produto, Venda } from './classes.js';
 
-  get password() {
-    return "Senha é privada";
-  }
+// Criando uma instância de Cliente
+const cliente1 = new Cliente(1, 'João Silva', '1990-05-15', 'MG123456', '2024-04-01', true);
 
-  set password(value) {
-    if (value.length >= 8) {
-      this._password = value;
-    } else {
-      console.error("Senha precisa ter pelo menos 8 caracteres");
-    }
-  }
+// Criando uma instância de Produto
+const produto1 = new Produto(101, 'Laptop', 3500.00);
 
-  displayInfo() {
-    return `User: ${this.name}, Email: ${this.email}, Role: ${this.role}`;
-  }
+// Criando uma instância de Venda
+const venda1 = new Venda(5001, cliente1.codigo, '2024-10-24', produto1.codProduto, 2, produto1.valor, produto1.valor * 2, 'Cartão de Crédito');
 
-  _generateID() {
-    return Math.floor(Math.random() * 10000);
-  }
-
-  static compareUsers(user1, user2) {
-    return user1.id === user2.id;
-  }
-}
-
-const user1 = new User(1, "Carlos", "carlos@example.com");
-user1.password = "12345678";
-console.log(user1.displayInfo());
-console.log(User.compareUsers(user1, new User(2, "Ana", "ana@example.com")));
+console.log(venda1);
