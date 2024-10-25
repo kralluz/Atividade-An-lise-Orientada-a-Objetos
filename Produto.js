@@ -1,4 +1,3 @@
-// Classe Contato
 class Contato {
     constructor(tel1, tel2, cel1, cel2, email) {
       this.tel1 = tel1;
@@ -9,7 +8,6 @@ class Contato {
     }
   }
   
-  // Classe Endereco
   class Endereco {
     constructor(cep, estado, cidade, rua, numero, complemento) {
       this.cep = cep;
@@ -21,7 +19,7 @@ class Contato {
     }
   }
   
-  // Classe Pessoa
+
   class Pessoa {
     constructor(codigo, nome, dataNascimento, identidade) {
       this.codigo = codigo;
@@ -31,7 +29,6 @@ class Contato {
     }
   }
   
-  // Classe Cliente (herança de Pessoa)
   class Cliente extends Pessoa {
     constructor(codigo, nome, dataNascimento, identidade, dataCadastro, emAberto) {
       super(codigo, nome, dataNascimento, identidade);
@@ -40,15 +37,14 @@ class Contato {
     }
   
     emitirExtrato() {
-      // Lógica de emissão de extrato
+
     }
   
     efetuarPagamento() {
-      // Lógica de pagamento
+
     }
   }
   
-  // Classe Fornecedor
   class Fornecedor {
     constructor(codFornecedor, razao, nomeFantasia, inscricaoEstadual, cnpj) {
       this.codFornecedor = codFornecedor;
@@ -59,7 +55,7 @@ class Contato {
     }
   }
   
-  // Classe Funcionario (herança de Pessoa)
+
   class Funcionario extends Pessoa {
     constructor(codigo, nome, dataNascimento, identidade, dataAdmissao, dataRescisao) {
       super(codigo, nome, dataNascimento, identidade);
@@ -68,23 +64,23 @@ class Contato {
     }
   
     cadastrarCliente(cliente) {
-      // Lógica de cadastro de cliente
+
     }
   
     consultarCliente(codigoCliente) {
-      // Lógica de consulta de cliente
+
     }
   
     alterarFornecedor(fornecedor) {
-      // Lógica de alteração de fornecedor
+
     }
   
     consultarFornecedor(codigoFornecedor) {
-      // Lógica de consulta de fornecedor
+
     }
   }
   
-  // Classe Compra
+
   class Compra {
     constructor(codCompra, notaFiscal, codProduto, quantidade, codFornecedor, dataCompra) {
       this.codCompra = codCompra;
@@ -96,7 +92,7 @@ class Contato {
     }
   }
   
-  // Classe Produto
+
   class Produto {
     constructor(codProduto, nome, valor) {
       this.codProduto = codProduto;
@@ -105,7 +101,7 @@ class Contato {
     }
   }
   
-  // Classe Venda
+
   class Venda {
     constructor(codVenda, codCliente, dataVenda, codProduto, quantidade, precoVenda, subTotal, formaPagamento) {
       this.codVenda = codVenda;
